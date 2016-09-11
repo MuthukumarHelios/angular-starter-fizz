@@ -12,6 +12,12 @@ app.factory('ListsService', function() {
           description: 'Description',
           image: 'images/logo.png',
           time: '15m'
+        },
+        {
+          heading: 'Heading 1',
+          description: 'Description 1',
+          image: 'images/logo.png',
+          time: '10m'
         }
       ]
 
