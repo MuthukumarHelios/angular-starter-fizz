@@ -1,0 +1,61 @@
+<p>view 2.</p>
+<h3>Manager can only create Employees and manipulate them</h3>
+<a ng-href="#/employee">Employee View</a></li>
+<div ng-controller="View1Ctrl">
+<table border="1" style="width: 300px">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </thead>
+          <!--<script src = "view1/view1.js"></script> -->
+
+            <tr ng-repeat="man in Manager_List">
+                 <td>{{man.Id}}</td>
+                 <td>{{man.Name}}</td>
+                 <td>{{man.Salary}}</td>
+            </tr>
+
+</table>
+</div>
+
+<div ng-controller = "View2Ctrl">
+<h3> used to crud in employss</h3>
+       <table>
+            <tr>
+              <td>EmpId: </td>
+               <td>
+                <span>{{ EmpModel.Id}}</span></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>
+             <input type="text" ng-model="EmpList.Name" /></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+               <td>
+               <input type="number" ng-model="EmpList.Salary"/></td>
+            </tr>
+            <tr>
+                <td>
+                <input type="button" value= "Save Data" data-ng-click="AddData()" /></td>
+                <td>
+                <input type="button" value= "Update Data" data-ng-click="UpdateData()" /></td>
+                </tr>
+        </table>
+
+        <table border="1" style="width: 300px">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </thead>
+            <tr data-ng-repeat="Emp in EmpList" data-ng-click="BindSelectedData(Emp)">
+                <td>{{ Emp.Id }}</td>
+                <td>{{ Emp.Name }}</td>
+                <td>{{ Emp.Salary }}</td>
+                <td><input type="button" value="Delete" data-ng-click="DeleteData(Emp)"/></td>
+            </tr>
+        </table>
+</div>

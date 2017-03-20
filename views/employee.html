@@ -1,0 +1,20 @@
+<h1>view 3 is mostly meant for Employee view</h1>
+<i>Employee dont have any access to manipulate</i>
+<h3>hello to employee page</h3>
+<div ng-controller = "View3Ctrl">
+  <table border = "1" style="width: 300px">
+
+    <thead>
+      <th>Id</th>
+      <th>Name:</th>
+      <th>Salary</th>
+    </thead>
+<!-- <h1>{{myWelcome}}</h1> -->
+
+    <tr data-ng-repeat="Emp in EmpList">
+       <td>{{Emp.Id}}</td>
+       <td>{{Emp.Name}}</td>
+       <td>{{Emp.Salary}}</td>
+    </tr>
+</table>
+</div>

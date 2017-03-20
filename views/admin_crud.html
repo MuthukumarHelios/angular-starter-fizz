@@ -1,0 +1,48 @@
+<div ng-controller = "View1Ctrl">
+<ul class="menu" >
+    <li><a ng-href="#/manager_login">Manager</a></li>
+    <li><a ng-href="#/employee">Employee</a></li>
+  </ul>
+<h3 ng-bind = "myWelcome"> </h3>
+<h3>Administrator</h3>
+<h3>Name: Admin</h3>
+<h3> used to crud in manager</h3>
+       <table>
+            <tr>
+              <td>Manager_Id: </td>
+               <td>
+                  <span>{{ Manager_Model.Id }}</span></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>
+                <input type="text" ng-model="Manager_List.Name" /></td>
+            </tr>
+            <tr>
+               <td>Salary:</td>
+               <td>
+               <input type="number" ng-model="Manager_List.Salary" /></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="Save Data" ng-click="AddData()" /></td>
+                <td>
+                    <input type="button" value="Update Data" data-ng-click="UpdateData()" /></td>
+            </tr>
+        </table>
+
+        <table border="1" style="width: 300px">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </thead>
+          <tr data-ng-repeat="mang in Manager_List" data-ng-click="BindSelectedData(mang)">
+                <td>{{ mang.Id }}</td>
+                <td>{{ mang.Name }}</td>
+                <td>{{ mang.Salary }}</td>
+                <td>
+              <input type="button" value="Delete" data-ng-click="DeleteData(manager)" /></td>      </tr>
+        </table>
+</div>
